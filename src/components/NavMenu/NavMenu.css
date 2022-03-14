@@ -1,0 +1,18 @@
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu button {
+  color: #25d8ae;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-menu {
+    width: 50%;
+  }
+}
