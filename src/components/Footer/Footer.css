@@ -3,7 +3,23 @@
   /* background-color: rgb(66, 66, 66); */
   /* padding-left: 25px;
   padding-right: 25px; */
+  display: flex;
   width: 100%;
   position: absolute;
   bottom: 0;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.footer__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color: #25d8ae;
 }
