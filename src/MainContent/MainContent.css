@@ -1,0 +1,7 @@
+.main-content {
+  /* background-color: rgb(66, 66, 66); */
+  padding-left: 25px;
+  padding-right: 25px;
+  position: relative;
+  display: flex;
+}
