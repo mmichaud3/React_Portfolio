@@ -1,7 +1,36 @@
 .main-content {
-  /* background-color: rgb(66, 66, 66); */
-  padding-left: 25px;
-  padding-right: 25px;
-  position: relative;
   display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  position: relative;
+}
+
+.main-content h1 {
+  font-size: 1.5rem;
+  color: #25d8ae;
+}
+
+.main-content h2 {
+  font-size: 5rem;
+  color: #dbd9d9;
+  margin: 0;
+}
+
+.main-content p {
+  font-size: 1.5rem;
+  color: #a1a1a1;
+}
+
+.main-content a {
+  color: #25d8ae;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-content a:hover {
+  color: #1eac8b;
+  transform: scale(1.1);
+  text-decoration: underline;
 }
