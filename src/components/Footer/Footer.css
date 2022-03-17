@@ -5,8 +5,9 @@
   padding-right: 25px; */
   display: flex;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  flex-shrink: 0;
+  /* position: absolute;
+  bottom: 0; */
 }
 
 .footer__socials {

@@ -1,6 +1,7 @@
 .main-content {
   display: flex;
   flex-direction: column;
+  flex: 1 0 auto;
   margin-top: 75px;
   padding-left: 5rem;
   padding-right: 5rem;
