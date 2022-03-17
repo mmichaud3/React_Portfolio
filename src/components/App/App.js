@@ -7,8 +7,9 @@ import {
   faGithub,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
+import { faDog } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
-library.add(faLinkedinIn, faGithub, faInstagram);
+library.add(faLinkedinIn, faGithub, faInstagram, faDog);
 
 function App() {
   return (
