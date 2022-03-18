@@ -1,0 +1,83 @@
+.expierence {
+  display: flex;
+  flex-direction: column;
+}
+
+.expierence__header h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.expierence__main {
+  display: flex;
+  /* align-items: center; */
+}
+
+.expierence__main__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.expierence__main__right {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-left: 25px;
+  padding: 5px;
+}
+
+.expierence__main__left button {
+  background-color: transparent;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  margin-top: 1rem;
+  color: #dbd9d9;
+  transition: all 0.2s ease-in-out;
+}
+
+.expierence__main__left button:hover {
+  /* color: var(--lightBlue); */
+  color: #ebe9e9;
+  transform: scale(1.1) translate(15px, 0);
+}
+
+.expierence__main__left__btn-focused {
+  color: var(--blue) !important;
+  transform: scale(1.1) translate(15px, 0);
+}
+
+.expierence__main__right h2 {
+  font-size: 1.5rem;
+  /* margin: 1rem; */
+}
+
+.expierence__main__right a {
+  color: var(--pink);
+  cursor: pointer;
+}
+
+.expierence__main__right a:hover {
+  color: #ff0099e8;
+}
+
+.expierence__main__right p {
+  font-size: 1rem;
+  color: var(--lightBlue);
+}
+
+.expierence__main__right li {
+  padding-bottom: 10px;
+  font-size: 1rem;
+  color: #a1a1a1;
+}
+
+.expierence__main__right li::marker {
+  color: var(--lightPink);
+}
+
+.expierence__main__right span {
+  color: var(--blue);
+}

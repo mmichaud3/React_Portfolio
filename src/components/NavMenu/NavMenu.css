@@ -4,7 +4,7 @@
 }
 
 .nav-menu button {
-  color: #25d8ae;
+  color: var(--lightGreen);
   background-color: transparent;
   font-size: 1rem;
   outline: none;

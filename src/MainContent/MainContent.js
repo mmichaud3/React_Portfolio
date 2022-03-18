@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './MainContent.css';
 import { useStateValue } from '../StateProvider';
 import About from '../components/About/About';
+import Expierence from '../components/Expierence/Expierence';
 
 function MainContent() {
   const [{ content }, dispatch] = useStateValue();
@@ -34,7 +35,15 @@ function MainContent() {
   );
 
   return (
-    <div className='main-content'>{content === 'about' ? <About /> : home}</div>
+    <div className='main-content'>
+      {content === 'about' ? (
+        <About />
+      ) : content === 'expierence' ? (
+        <Expierence />
+      ) : (
+        home
+      )}
+    </div>
   );
 }
 

@@ -4,6 +4,7 @@
   /* padding-left: 25px;
   padding-right: 25px; */
   display: flex;
+  justify-content: center;
   width: 100%;
   flex-shrink: 0;
   /* position: absolute;
@@ -27,7 +28,7 @@
 .footer__socials__icons::before {
   position: absolute;
   content: ' ';
-  border-top: 1px solid #25d8ae;
+  border-top: 1px solid var(--lightGreen);
   width: 5rem;
   top: 50%;
   left: -6rem;
@@ -36,14 +37,14 @@
 .footer__socials__icons::after {
   position: absolute;
   content: ' ';
-  border-top: 1px solid #25d8ae;
+  border-top: 1px solid var(--lightGreen);
   width: 5rem;
   top: 50%;
   right: -6rem;
 }
 
 .footer__socials__icons__icon {
-  color: #25d8ae;
+  color: var(--lightGreen);
   transition: all 0.2s ease-in-out;
 }
 
@@ -66,7 +67,7 @@
 }
 
 .footer__email__container a {
-  color: #25d8ae;
+  color: var(--lightGreen);
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
@@ -74,7 +75,7 @@
 .footer__email__container::before {
   position: absolute;
   content: ' ';
-  border-top: 1px solid #25d8ae;
+  border-top: 1px solid var(--lightGreen);
   width: 5rem;
   top: 50%;
   left: -6rem;
@@ -83,7 +84,7 @@
 .footer__email__container::after {
   position: absolute;
   content: ' ';
-  border-top: 1px solid #25d8ae;
+  border-top: 1px solid var(--lightGreen);
   width: 5rem;
   top: 50%;
   right: -6rem;

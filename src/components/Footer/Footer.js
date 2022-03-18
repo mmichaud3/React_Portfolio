@@ -40,11 +40,17 @@ function Footer() {
               icon='fa-brands fa-instagram'
             />
           </a>
-        </div>
-      </div>
-      <div className='footer__email'>
-        <div className='footer__email__container'>
-          <a href='mailto:mvmichaud3@gmail.com'>mvmichaud3@gmail.com</a>
+          <a
+            href='mailto:mvmichaud3@gmail.com'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <FontAwesomeIcon
+              className='footer__socials__icons__icon'
+              size='lg'
+              icon='fa-solid fa-envelope'
+            />
+          </a>
         </div>
       </div>
     </div>

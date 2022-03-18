@@ -3,14 +3,14 @@
   flex-direction: column;
   flex: 1 0 auto;
   margin-top: 75px;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
   position: relative;
 }
 
 .main-content h1 {
   font-size: 1.5rem;
-  color: #25d8ae;
+  color: var(--lightGreen);
 }
 
 .main-content h2 {

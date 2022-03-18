@@ -7,9 +7,10 @@ import {
   faGithub,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
-import { faDog } from '@fortawesome/free-solid-svg-icons';
+import { faDog, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
-library.add(faLinkedinIn, faGithub, faInstagram, faDog);
+import '../../styles.css';
+library.add(faLinkedinIn, faGithub, faInstagram, faEnvelope, faDog);
 
 function App() {
   return (
