@@ -16,13 +16,15 @@
 .expierence__main__left {
   display: flex;
   flex-direction: column;
+  margin-right: 25px;
+  min-width: 190px;
 }
 
 .expierence__main__right {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   padding: 5px;
 }
 

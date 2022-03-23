@@ -25,11 +25,21 @@ function About() {
             Outside of work I enjoy training for ultra marathons, programming
             games, and hanging out with my{' '}
             <FontAwesomeIcon
-              className='about__main__leftside__icon'
+              className='about__main__leftside__icon__lg'
               size='md'
               icon='fa-solid fa-dog'
             />
-            s.
+            <FontAwesomeIcon
+              className='about__main__leftside__icon__lg'
+              size='md'
+              icon='fa-solid fa-dog'
+            />
+            <FontAwesomeIcon
+              className='about__main__leftside__icon__sm'
+              size='xs'
+              icon='fa-solid fa-dog'
+            />
+            .
           </p>
         </div>
         <div className='about__main__rightside'>

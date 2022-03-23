@@ -20,9 +20,14 @@
   flex-direction: column;
 }
 
-.about__main__leftside__icon {
-  color: #25d8ae;
+.about__main__leftside__icon__lg {
+  color: var(--lightPink);
   margin-bottom: 3px;
+  margin-right: 3px;
+}
+
+.about__main__leftside__icon__sm {
+  color: var(--lightBlue);
 }
 
 .about__main__rightside {

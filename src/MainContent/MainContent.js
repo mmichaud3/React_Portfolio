@@ -3,6 +3,7 @@ import './MainContent.css';
 import { useStateValue } from '../StateProvider';
 import About from '../components/About/About';
 import Expierence from '../components/Expierence/Expierence';
+import Projects from '../components/Projects/Projects';
 
 function MainContent() {
   const [{ content }, dispatch] = useStateValue();
@@ -40,6 +41,8 @@ function MainContent() {
         <About />
       ) : content === 'expierence' ? (
         <Expierence />
+      ) : content === 'projects' ? (
+        <Projects />
       ) : (
         home
       )}
