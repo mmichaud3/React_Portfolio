@@ -7,3 +7,50 @@
   font-size: 2rem;
   margin-bottom: 3rem;
 }
+
+.projects__main {
+  display: flex;
+}
+
+.projects__main__left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
+  min-width: 190px;
+}
+
+.projects__main__left button {
+  background-color: transparent;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  margin-top: 1rem;
+  color: #dbd9d9;
+  transition: all 0.2s ease-in-out;
+}
+
+.projects__main__left button:hover {
+  /* color: var(--lightBlue); */
+  color: #ebe9e9;
+  transform: scale(1.1) translate(15px, 0);
+}
+
+.projects__main__left__btn-focused {
+  color: var(--blue) !important;
+  transform: scale(1.1) translate(15px, 0);
+}
+
+.projects__main__right {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  /* margin-left: 25px; */
+  /* padding: 5px; */
+}
+
+.projects__main__right p {
+  font-size: 1rem;
+  color: #dbd9d9;
+}
