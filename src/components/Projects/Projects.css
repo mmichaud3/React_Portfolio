@@ -50,7 +50,34 @@
   /* padding: 5px; */
 }
 
+.projects__main__right span {
+  color: var(--lightPink);
+}
+
 .projects__main__right p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #dbd9d9;
+  margin-top: 11px;
+}
+
+.projects__main__right a {
+  color: var(--pink);
+}
+
+.projects__main__right a:hover {
+  color: #ff0099e8;
+}
+
+.projects__main__right__theme-image {
+  max-width: 700px;
+  display: flex;
+}
+
+.projects__main__right__theme-image img {
+  width: 100%;
+}
+
+.carousel-img {
+  width: 100%;
+  max-height: 400px;
 }
