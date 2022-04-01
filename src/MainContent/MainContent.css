@@ -1,22 +1,24 @@
 .main-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex: 1 0 auto;
-  margin-top: 75px;
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding: 2.5rem;
+
   position: relative;
 }
 
 .main-content h1 {
   font-size: 1.5rem;
   color: var(--lightGreen);
+  align-self: flex-start;
 }
 
 .main-content h2 {
   font-size: 5rem;
   color: #dbd9d9;
   margin: 0;
+  align-self: flex-start;
 }
 
 .main-content p {
@@ -34,4 +36,12 @@
   color: #1eac8b;
   transform: scale(1.1);
   text-decoration: underline;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-content {
+    padding-left: 15rem;
+    padding-right: 15rem;
+    margin-top: 75px;
+  }
 }
