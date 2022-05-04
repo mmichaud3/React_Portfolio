@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 import screenShot from '../../images/RetroDocPreview.png';
+import spotifyLogo from '../../images/spotify.jpg';
 import Carousel from 'react-bootstrap/Carousel';
 import gameSS from '../../images/gameSS.png';
 import screenShotGame from '../../images/screenShotGame.png';
 import deadSS from '../../images/deadSS.png';
+import { useMediaQuery } from 'react-responsive';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 import './Projects.css';
 
 function Projects() {
   const [projectShowing, setProjectShowing] = useState('theme');
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
+  const projectArr = [
+    { id: 'theme', name: 'Retro Doc Theme' },
+    { id: 'game', name: 'Space Game' },
+    { id: 'spotify', name: 'Crown Beats' },
+  ];
 
   const showProject = (e) => {
     setProjectShowing(e.target.id);
@@ -32,11 +41,25 @@ function Projects() {
     </>
   );
 
+  const spotify = (
+    <>
+      <p>
+        <a href='http://crown-beats.surge.sh/' target='_blank' rel='noreferrer'>
+          Crown Beats
+        </a>{' '}
+        is a music playlist app built in React using the Spotify API.
+      </p>
+      <div className='projects__main__right__theme-image'>
+        <img src={spotifyLogo} alt='Screen Shot' />
+      </div>
+    </>
+  );
+
   const game = (
     <>
       <p>
         A game I am developing in <span>Unity</span>. A shooter game which
-        allows the user to save the outcome as a image.
+        allows the user to save the outcome as an image.
       </p>
       <div className='projects__main__right__game-image'>
         <Carousel>
@@ -79,34 +102,71 @@ function Projects() {
       </div>
       <div className='projects__main'>
         <div className='projects__main__left'>
-          <button
-            className={
-              projectShowing === 'theme'
-                ? 'projects__main__left__btn-focused'
-                : ''
-            }
-            onClick={showProject}
-            id='theme'
-          >
-            Retro Doc Theme
-          </button>
-          <button
-            className={
-              projectShowing === 'game'
-                ? 'projects__main__left__btn-focused'
-                : ''
-            }
-            onClick={showProject}
-            id='game'
-          >
-            Space Game
-          </button>
+          {isSmallScreen ? (
+            <Dropdown>
+              <Dropdown.Toggle variant='secondary' id='dropdown-basic'>
+                {projectShowing === 'theme'
+                  ? 'Retro Doc Theme'
+                  : projectShowing === 'spotify'
+                  ? 'Crown Beats'
+                  : 'Space Game'}
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                {projectArr
+                  .filter((el) => el.id !== projectShowing)
+                  .map((el) => (
+                    <Dropdown.Item onClick={() => setProjectShowing(el.id)}>
+                      {el.name}
+                    </Dropdown.Item>
+                  ))}
+              </Dropdown.Menu>
+            </Dropdown>
+          ) : (
+            <>
+              <button
+                className={
+                  projectShowing === 'theme'
+                    ? 'projects__main__left__btn-focused'
+                    : ''
+                }
+                onClick={showProject}
+                id='theme'
+              >
+                Retro Doc Theme
+              </button>
+              <button
+                className={
+                  projectShowing === 'game'
+                    ? 'projects__main__left__btn-focused'
+                    : ''
+                }
+                onClick={showProject}
+                id='game'
+              >
+                Space Game
+              </button>
+              <button
+                className={
+                  projectShowing === 'spotify'
+                    ? 'projects__main__left__btn-focused'
+                    : ''
+                }
+                onClick={showProject}
+                id='spotify'
+              >
+                Crown Beats
+              </button>
+            </>
+          )}
         </div>
         <div className='projects__main__right'>
           {projectShowing === 'theme'
             ? theme
             : projectShowing === 'game'
             ? game
+            : projectShowing === 'spotify'
+            ? spotify
             : theme}
         </div>
       </div>

@@ -26,9 +26,6 @@ function NavMenu() {
       <button onClick={handleClick} id='projects'>
         Projects
       </button>
-      <button onClick={handleClick} id='contact'>
-        Contact
-      </button>
     </div>
   );
 }

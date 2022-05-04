@@ -1,6 +1,8 @@
 .projects {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
 }
 
 .projects__header h1 {
@@ -10,6 +12,7 @@
 
 .projects__main {
   display: flex;
+  flex-direction: column;
 }
 
 .projects__main__left {
@@ -80,4 +83,10 @@
 .carousel-img {
   width: 100%;
   max-height: 400px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects__main {
+    flex-direction: row;
+  }
 }

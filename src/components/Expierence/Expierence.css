@@ -1,6 +1,8 @@
 .expierence {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
 }
 
 .expierence__header h1 {
@@ -10,14 +12,17 @@
 
 .expierence__main {
   display: flex;
+  flex-direction: column;
   /* align-items: center; */
 }
 
 .expierence__main__left {
   display: flex;
-  flex-direction: column;
-  margin-right: 25px;
-  min-width: 190px;
+  flex-direction: row;
+}
+
+.expierence__main__left__btns {
+  display: flex;
 }
 
 .expierence__main__right {
@@ -36,6 +41,7 @@
   cursor: pointer;
   text-align: left;
   margin-top: 1rem;
+  margin-right: 1rem;
   color: #dbd9d9;
   transition: all 0.2s ease-in-out;
 }
@@ -49,6 +55,10 @@
 .expierence__main__left__btn-focused {
   color: var(--blue) !important;
   transform: scale(1.1) translate(15px, 0);
+}
+
+.expierence__main__left__arrow-btn {
+  visibility: visible;
 }
 
 .expierence__main__right h2 {
@@ -82,4 +92,29 @@
 
 .expierence__main__right span {
   color: var(--blue);
+}
+
+@media screen and (min-width: 768px) {
+  .expierence__main {
+    flex-direction: row;
+  }
+
+  .expierence__main__left {
+    flex-direction: column;
+    margin-right: 25px;
+    min-width: 190px;
+  }
+
+  .expierence__main__left__btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .expierence__main__left button {
+    margin-right: 0;
+  }
+
+  .expierence__main__left__arrow-btn {
+    visibility: hidden;
+  }
 }

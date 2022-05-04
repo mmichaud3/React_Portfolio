@@ -1,8 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
+
+import { useMediaQuery } from 'react-responsive';
 import './Expierence.css';
 
 function Expierence() {
   const [expierenceShowing, setExpierenceShowing] = useState('leadership');
+
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
+  const expArr = [
+    { id: 'leadership', name: 'Leadership Connect' },
+    { id: 'glenair', name: 'Glenair' },
+    { id: 'neddie', name: 'Neddie' },
+    { id: 'mvm', name: 'Michael Vincent Michaud' },
+  ];
 
   const showExpierence = (e) => {
     setExpierenceShowing(e.target.id);
@@ -119,50 +130,77 @@ function Expierence() {
       </div>
       <div className='expierence__main'>
         <div className='expierence__main__left'>
-          <button
-            className={
-              expierenceShowing === 'leadership'
-                ? 'expierence__main__left__btn-focused'
-                : ''
-            }
-            onClick={showExpierence}
-            id='leadership'
-          >
-            Leadership Connect
-          </button>
-          <button
-            className={
-              expierenceShowing === 'glenair'
-                ? 'expierence__main__left__btn-focused'
-                : ''
-            }
-            onClick={showExpierence}
-            id='glenair'
-          >
-            Glenair
-          </button>
-          <button
-            className={
-              expierenceShowing === 'neddie'
-                ? 'expierence__main__left__btn-focused'
-                : ''
-            }
-            onClick={showExpierence}
-            id='neddie'
-          >
-            Neddie
-          </button>
-          <button
-            className={
-              expierenceShowing === 'mvm'
-                ? 'expierence__main__left__btn-focused'
-                : ''
-            }
-            onClick={showExpierence}
-            id='mvm'
-          >
-            Michael Vincent Michaud
-          </button>
+          {isSmallScreen ? (
+            <Dropdown>
+              <Dropdown.Toggle variant='secondary' id='dropdown-basic'>
+                {expierenceShowing === 'mvm'
+                  ? 'Michael Vincent Michaud'
+                  : expierenceShowing === 'glenair'
+                  ? 'Glenair'
+                  : expierenceShowing === 'neddie'
+                  ? 'Neddie'
+                  : 'Leadership Connect'}
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                {expArr
+                  .filter((el) => el.id !== expierenceShowing)
+                  .map((el) => (
+                    <Dropdown.Item onClick={() => setExpierenceShowing(el.id)}>
+                      {el.name}
+                    </Dropdown.Item>
+                  ))}
+              </Dropdown.Menu>
+            </Dropdown>
+          ) : (
+            <div className='expierence__main__left__btns'>
+              <button
+                className={
+                  expierenceShowing === 'leadership'
+                    ? 'expierence__main__left__btn-focused'
+                    : ''
+                }
+                onClick={showExpierence}
+                id='leadership'
+              >
+                Leadership Connect
+              </button>
+
+              <button
+                className={
+                  expierenceShowing === 'glenair'
+                    ? 'expierence__main__left__btn-focused'
+                    : ''
+                }
+                onClick={showExpierence}
+                id='glenair'
+              >
+                Glenair
+              </button>
+              <button
+                className={
+                  expierenceShowing === 'neddie'
+                    ? 'expierence__main__left__btn-focused'
+                    : ''
+                }
+                onClick={showExpierence}
+                id='neddie'
+              >
+                Neddie
+              </button>
+              <button
+                className={
+                  expierenceShowing === 'mvm'
+                    ? 'expierence__main__left__btn-focused'
+                    : ''
+                }
+                onClick={showExpierence}
+                id='mvm'
+              >
+                Michael Vincent Michaud
+              </button>
+            </div>
+          )}
         </div>
         <div className='expierence__main__right'>
           {expierenceShowing === 'mvm'
